@@ -35,4 +35,20 @@ public class BigInteger
 		this.number -= other.getNumber();
 		return this;
 	}
+	public int compareTo(BigInteger other){
+		//int a = this.getNumber()
+		if(this.getNumber() == other.getNumber()){
+			return 0;
+		}
+		else if(this.getNumber() < other.getNumber()){
+			return -1;
+			}
+		else
+		return 1;
+	}
+	public BigInteger clone(){
+		BigInteger b = new BigInteger(7);
+		b = this;
+		return b;
+	}
 }
